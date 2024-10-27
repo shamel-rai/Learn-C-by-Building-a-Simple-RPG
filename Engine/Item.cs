@@ -8,17 +8,15 @@ namespace Engine
 {
     public class Item
     {
-        public int ID { get; set; }
-        public string Name { get; set; }
-        public string NamePural { get; set; }
+        public int ID { get; }
+        public string Name { get; }
+        public string Description { get; }
 
-        //Constructor 
-        public Item (int id , string name, string namePlural)
+        public Item(int id, string name, string description)
         {
             ID = id;
             Name = name;
-            NamePural = namePlural;
+            Description = description;
         }
-
     }
 }

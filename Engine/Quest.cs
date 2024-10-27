@@ -8,21 +8,21 @@ namespace Engine
 {
     public class Quest
     {
-        public int ID { get; set; } 
-        public string Name { get; set; }
-        public string Description { get; set; }
-        public int RewardExperiencePoints { get; set; }
-        public int RewardGold { get; set; }
+        public int ID { get; }
+        public string Name { get; }
+        public string Description { get; }
+        public int ExperienceReward { get; }
+        public int GoldReward { get; }
+        public List<QuestCompletionItem> QuestCompletionItems { get; } = new List<QuestCompletionItem>();
+        public Item RewardItem { get; set; }
 
-        //Constructor
-        public Quest(int id, string name, string description, int rewardExperiencePoints, int rewardGold)
+        public Quest(int id, string name, string description, int experienceReward, int goldReward)
         {
-            ID= id;
-            Name= name;
-            Description= description;
-            RewardExperiencePoints = rewardExperiencePoints;
-            RewardGold = rewardGold;
+            ID = id;
+            Name = name;
+            Description = description;
+            ExperienceReward = experienceReward;
+            GoldReward = goldReward;
         }
-
     }
 }

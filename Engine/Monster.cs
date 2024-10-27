@@ -6,22 +6,26 @@ using System.Threading.Tasks;
 
 namespace Engine
 {
-    public class Monster : LivingCreature  //Inheritance
+    public class Monster
     {
-        public int ID { get; set; }
-        public string Name { get; set; }
-       
-        public int MaximumDamage { get; set; }
-        public int RewardExperiencePoints {  get; set; }
-        public int RewardGold { get; set; }
+        public int ID { get; }
+        public string Name { get; }
+        public int Health { get; }
+        public int Damage { get; }
+        public int Experience { get; }
+        public int Gold { get; }
+        public int LootTableChance { get; }
+        public List<LootItem> LootTable { get; } = new List<LootItem>();
 
-        public Monster(int id,string name, int maxDmg, int rewardExperiencePoints, int rewardGold, int maxHitPoints, int currentHitPoints ): base(maxHitPoints, currentHitPoints) { 
+        public Monster(int id, string name, int health, int damage, int experience, int gold, int lootTableChance)
+        {
             ID = id;
             Name = name;
-            MaximumDamage = maxDmg;
-            RewardExperiencePoints = rewardExperiencePoints;
-            RewardGold = rewardGold;
+            Health = health;
+            Damage = damage;
+            Experience = experience;
+            Gold = gold;
+            LootTableChance = lootTableChance;
         }
-
     }
 }

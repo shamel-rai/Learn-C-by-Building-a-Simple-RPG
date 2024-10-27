@@ -6,15 +6,14 @@ using System.Threading.Tasks;
 
 namespace Engine
 {
-    public class HealingPotion : Item  //Inheritance
+    public class HealingPotion : Item
     {
-       
-        public int AmountToHeal { get; set; }
+        public int HealAmount { get; }
 
-        //Constructor 
-        public HealingPotion(int id, string name, string namePlural, int amountToHeal) : base(id, name, namePlural)
-        { 
-            AmountToHeal = amountToHeal;
+        public HealingPotion(int id, string name, string description, int healAmount)
+            : base(id, name, description)
+        {
+            HealAmount = healAmount;
         }
     }
 }
