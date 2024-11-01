@@ -62,7 +62,6 @@
             label1.Size = new Size(62, 15);
             label1.TabIndex = 0;
             label1.Text = "Hit points:";
-            label1.Click += label1_Click;
             // 
             // label2
             // 
@@ -139,7 +138,6 @@
             label5.Size = new Size(74, 15);
             label5.TabIndex = 9;
             label5.Text = "Select action";
-            label5.Click += label5_Click;
             // 
             // cboWeapons
             // 
@@ -211,6 +209,7 @@
             btnWest.TabIndex = 17;
             btnWest.Text = "West";
             btnWest.UseVisualStyleBackColor = true;
+            btnWest.Click += btnWest_Click;
             // 
             // rtbLocation
             // 

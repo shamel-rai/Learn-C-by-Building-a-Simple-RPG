@@ -8,15 +8,13 @@ namespace Engine
 {
     public class Weapon : Item
     {
-        public int Damage { get; }
-        public int AttackValue { get; }
+        public int MinimumDamage { get; set; }
+        public int MaximumDamage { get; set; }
 
-        public Weapon(int id, string name, string description, int damage, int attackValue)
-            : base(id, name, description)
+        public Weapon(int id, string name, string namePlural, int minimumDamage, int maximumDamage) : base(id, name, namePlural)
         {
-            Damage = damage;
-            AttackValue = attackValue;
+            MinimumDamage = minimumDamage;
+            MaximumDamage = maximumDamage;
         }
     }
 }
-

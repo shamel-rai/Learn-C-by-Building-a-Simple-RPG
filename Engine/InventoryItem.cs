@@ -11,9 +11,9 @@ namespace Engine
         public Item Details { get; set; }
         public int Quantity { get; set; }
 
-        public InventoryItem(Item itemDetail, int quantity)
+        public InventoryItem(Item details, int quantity)
         {
-            Details = itemDetail;
+            Details = details;
             Quantity = quantity;
         }
     }

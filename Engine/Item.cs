@@ -8,15 +8,15 @@ namespace Engine
 {
     public class Item
     {
-        public int ID { get; }
-        public string Name { get; }
-        public string Description { get; }
+        public int ID { get; set; }
+        public string Name { get; set; }
+        public string NamePlural { get; set; }
 
-        public Item(int id, string name, string description)
+        public Item(int id, string name, string namePlural)
         {
             ID = id;
             Name = name;
-            Description = description;
+            NamePlural = namePlural;
         }
     }
 }

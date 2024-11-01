@@ -8,12 +8,12 @@ namespace Engine
 {
     public class QuestCompletionItem
     {
-        public Item Item { get; }
-        public int Quantity { get; }
+        public Item Details { get; set; }
+        public int Quantity { get; set; }
 
-        public QuestCompletionItem(Item item, int quantity)
+        public QuestCompletionItem(Item details, int quantity)
         {
-            Item = item;
+            Details = details;
             Quantity = quantity;
         }
     }

@@ -8,15 +8,15 @@ namespace Engine
 {
     public class LootItem
     {
-        public Item Item { get; }
-        public int Chance { get; }
-        public bool IsAlwaysDropped { get; }
+        public Item Details { get; set; }
+        public int DropPercentage { get; set; }
+        public bool IsDefaultItem { get; set; }
 
-        public LootItem(Item item, int chance, bool isAlwaysDropped)
+        public LootItem(Item details, int dropPercentage, bool isDefaultItem)
         {
-            Item = item;
-            Chance = chance;
-            IsAlwaysDropped = isAlwaysDropped;
+            Details = details;
+            DropPercentage = dropPercentage;
+            IsDefaultItem = isDefaultItem;
         }
     }
 }
