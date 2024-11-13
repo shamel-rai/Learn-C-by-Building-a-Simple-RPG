@@ -163,6 +163,7 @@
             btnUseWeapon.TabIndex = 12;
             btnUseWeapon.Text = "Use";
             btnUseWeapon.UseVisualStyleBackColor = true;
+            btnUseWeapon.Click += btnUseWeapon_Click;
             // 
             // btnUsePotion
             // 
@@ -172,6 +173,7 @@
             btnUsePotion.TabIndex = 13;
             btnUsePotion.Text = "Use";
             btnUsePotion.UseVisualStyleBackColor = true;
+            btnUsePotion.Click += btnUsePotion_Click;
             // 
             // btnNorth
             // 
@@ -285,7 +287,6 @@
             Controls.Add(label1);
             Name = "SuperAdventure";
             Text = "My Game";
-            Load += SuperAdventure_Load;
             ((System.ComponentModel.ISupportInitialize)dgvInventory).EndInit();
             ((System.ComponentModel.ISupportInitialize)dgvQuests).EndInit();
             ResumeLayout(false);
